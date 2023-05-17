@@ -12,6 +12,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "@tsconfig/svelte": "^4.0.1",
+    "@types/node": "^20.1.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "svelte": "^3.57.0",
@@ -22,6 +23,7 @@
     "vite": "^4.3.2"
   },
   "dependencies": {
+    "firebase": "^9.22.0",
     "svelte-spa-router": "^3.3.0"
   }
 }
