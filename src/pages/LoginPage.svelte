@@ -2,6 +2,7 @@
     import { login, isLoggedIn } from "~/stores/auth";
     import { push } from "svelte-spa-router";
     import logoImg from "~/assets/images/logo.png";
+    import Header from "~/components/header/Header.svelte";
 
     let email: string;
     let password: string;
@@ -20,14 +21,7 @@
     }
 </script>
 
-<nav
-    class="fixed top-0 left-0 right-0 h-16 border-b border-gray-300 bg-white z-20 flex"
->
-    <div class="h-full flex items-center justify-center gap-5 px-5">
-        <img class="w-10 h-10 object-contain" src={logoImg} alt="logo" />
-        <div class="font-semibold text-lg text-primary-900">Studiotwofour</div>
-    </div>
-</nav>
+<Header />
 <main class="pt-16">
     <div class="container mx-auto py-60">
         <div class="flex flex-col gap-8">
