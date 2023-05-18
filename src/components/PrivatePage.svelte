@@ -9,6 +9,10 @@
     });
 </script>
 
+{#if $authStore.isLoading}
+    <div>Loading...</div>
+{/if}
+
 {#if $authStore.user}
     <slot />
 {/if}
