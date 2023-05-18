@@ -10,5 +10,6 @@
         <h1>Index</h1>
         <a href="/login" use:link>Login</a>
         <button on:click={authHandlers.logout}>Logout</button>
+        <div>Check Deployment</div>
     </DashboardLayout>
 </PrivatePage>
