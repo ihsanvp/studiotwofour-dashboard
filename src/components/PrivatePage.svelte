@@ -1,15 +1,14 @@
 <script lang="ts">
     import { replace } from "svelte-spa-router";
-    import { isLoggedIn } from "../stores/test";
+    import { authStore } from "~/stores/authStore";
 
-    isLoggedIn.subscribe((state) => {
-        console.log(state);
-        if (!state) {
+    authStore.subscribe((state) => {
+        if (!state.isLoading && !state.user) {
             replace("/login");
         }
     });
 </script>
 
-{#if $isLoggedIn}
+{#if $authStore.user}
     <slot />
 {/if}

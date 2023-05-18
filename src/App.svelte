@@ -2,21 +2,28 @@
     import Router from "svelte-spa-router";
     import IndexPage from "./pages/IndexPage.svelte";
     import LoginPage from "./pages/LoginPage.svelte";
-    import PrivatePage from "./components/PrivatePage.svelte";
-    import { isLoggedIn } from "./stores/test";
     import { onMount } from "svelte";
+    import { auth } from "~/lib/firebase/firebaseClient";
+    import { authStore } from "~/stores/authStore";
 
     const routes = {
         "/": IndexPage,
         "/login": LoginPage,
     };
 
-    onMount(() => {
-        setTimeout(() => {
-            console.log("run");
-            isLoggedIn.set(false);
-        }, 3000);
-    });
+    onMount(() =>
+        auth.onAuthStateChanged(async (user) => {
+            authStore.set({
+                isLoading: false,
+                user:
+                    (user && {
+                        id: user.uid,
+                        email: user.email as string,
+                    }) ||
+                    null,
+            });
+        })
+    );
 </script>
 
 <Router {routes} />

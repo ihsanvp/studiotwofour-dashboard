@@ -1,1 +1,45 @@
-<h1>Login</h1>
+<script lang="ts">
+    import { authHandlers, authStore } from "~/stores/authStore";
+    import { push } from "svelte-spa-router";
+
+    let email: string;
+    let password: string;
+
+    async function onSubmit() {
+        if (email && password) {
+            try {
+                await authHandlers.login(email, password);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        if ($authStore.user) {
+            push("/");
+        }
+    }
+</script>
+
+<div class="w-full h-screen flex flex-col items-center justify-center">
+    <h1 class="text-4xl mb-3">Login</h1>
+    <form class="flex flex-col" on:submit|preventDefault={onSubmit}>
+        <label for="email">
+            <input
+                class="border"
+                type="email"
+                id="email"
+                placeholder="Email"
+                bind:value={email}
+            />
+        </label>
+        <label for="password">
+            <input
+                class="border"
+                type="password"
+                id="password"
+                placeholder="Password"
+                bind:value={password}
+            />
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</div>
