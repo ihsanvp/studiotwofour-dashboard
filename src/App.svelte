@@ -7,11 +7,13 @@
     import { auth as authStore } from "~/stores/auth";
     import UsersPage from "./pages/UsersPage.svelte";
     import AdsPage from "./pages/AdsPage.svelte";
+    import AssetsPage from "./pages/AssetsPage.svelte";
 
     const routes = {
         "/": IndexPage,
         "/users": UsersPage,
         "/ads": AdsPage,
+        "/assets": AssetsPage,
         "/login": LoginPage,
     };
 
