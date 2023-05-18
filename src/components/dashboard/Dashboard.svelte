@@ -14,6 +14,11 @@
             icon: "tabler:users",
             label: "Users",
         },
+        {
+            href: "/ads",
+            icon: "fluent:window-ad-20-filled",
+            label: "Ad Banners",
+        },
     ];
 </script>
 

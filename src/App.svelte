@@ -6,10 +6,12 @@
     import { auth } from "~/lib/firebase/firebaseClient";
     import { auth as authStore } from "~/stores/auth";
     import UsersPage from "./pages/UsersPage.svelte";
+    import AdsPage from "./pages/AdsPage.svelte";
 
     const routes = {
         "/": IndexPage,
         "/users": UsersPage,
+        "/ads": AdsPage,
         "/login": LoginPage,
     };
 
