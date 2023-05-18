@@ -7,6 +7,6 @@
 >
     <div class="h-full flex items-center justify-center gap-5 px-5">
         <img class="w-10 h-10 object-contain" src={logoImg} alt="logo" />
-        <div class="font-semibold text-lg text-amber-900">Studiotwofour</div>
+        <div class="font-semibold text-lg text-primary-900">Studiotwofour</div>
     </div>
 </nav>

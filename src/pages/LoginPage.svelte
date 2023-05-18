@@ -25,13 +25,13 @@
 >
     <div class="h-full flex items-center justify-center gap-5 px-5">
         <img class="w-10 h-10 object-contain" src={logoImg} alt="logo" />
-        <div class="font-semibold text-lg text-amber-900">Studiotwofour</div>
+        <div class="font-semibold text-lg text-primary-900">Studiotwofour</div>
     </div>
 </nav>
 <main class="pt-16">
     <div class="container mx-auto py-60">
         <div class="flex flex-col gap-8">
-            <h1 class="text-4xl mb-3 font-semibold text-amber-950">
+            <h1 class="text-4xl mb-3 font-semibold text-primary-950">
                 Login to Studiotwofour
             </h1>
             <form
@@ -44,7 +44,7 @@
                 >
                     <span>Email</span>
                     <input
-                        class="w-full border border-amber-900 p-3 rounded active:outline-amber-500 focus:outline-amber-500"
+                        class="w-full border border-primary-900 p-3 rounded active:outline-primary-500 focus:outline-primary-500"
                         type="email"
                         id="email"
                         bind:value={email}
@@ -56,14 +56,14 @@
                 >
                     <span>Password</span>
                     <input
-                        class="w-full border border-amber-900 p-3 rounded active:outline-amber-500 focus:outline-amber-500"
+                        class="w-full border border-primary-900 p-3 rounded active:outline-primary-500 focus:outline-primary-500"
                         type="password"
                         id="password"
                         bind:value={password}
                     />
                 </label>
                 <button
-                    class="w-80 bg-amber-500 hover:bg-amber-600 text-white p-3 rounded cursor-pointer font-semibold mt-3"
+                    class="w-80 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded cursor-pointer font-semibold mt-3 active:outline-primary-700 focus:outline-primary-700"
                     type="submit">Log In</button
                 >
             </form>
