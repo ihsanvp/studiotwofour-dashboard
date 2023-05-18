@@ -1,8 +1,5 @@
 <script>
-    import DashboardLayout from "~/components/DashboardLayout.svelte";
-    import PrivatePage from "~/components/PrivatePage.svelte";
+    import Dashboard from "~/components/dashboard/Dashboard.svelte";
 </script>
 
-<PrivatePage>
-    <DashboardLayout>Users</DashboardLayout>
-</PrivatePage>
+<Dashboard>Users</Dashboard>

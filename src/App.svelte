@@ -4,7 +4,7 @@
     import LoginPage from "./pages/LoginPage.svelte";
     import { onMount } from "svelte";
     import { auth } from "~/lib/firebase/firebaseClient";
-    import { authStore } from "~/stores/authStore";
+    import { auth as authStore } from "~/stores/auth";
     import UsersPage from "./pages/UsersPage.svelte";
 
     const routes = {

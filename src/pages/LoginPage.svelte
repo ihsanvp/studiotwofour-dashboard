@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { authHandlers, authStore } from "~/stores/authStore";
+    import { login, isLoggedIn } from "~/stores/auth";
     import { push } from "svelte-spa-router";
     import logoImg from "~/assets/images/logo.png";
 
@@ -9,12 +9,12 @@
     async function onSubmit() {
         if (email && password) {
             try {
-                await authHandlers.login(email, password);
+                await login(email, password);
             } catch (err) {
                 console.log(err);
             }
         }
-        if ($authStore.user) {
+        if ($isLoggedIn) {
             push("/");
         }
     }

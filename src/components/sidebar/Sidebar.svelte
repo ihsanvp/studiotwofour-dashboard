@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DashboardLink from "./DashboardLink.svelte";
+    import SidebarLink from "./SidebarLink.svelte";
 
     interface Link {
         href: string;
@@ -15,8 +15,8 @@
 >
     <div class="p-2 flex flex-col gap-0">
         {#each links as link}
-            <DashboardLink href={link.href} icon={link.icon}
-                >{link.label}</DashboardLink
+            <SidebarLink href={link.href} icon={link.icon}
+                >{link.label}</SidebarLink
             >
         {/each}
     </div>
